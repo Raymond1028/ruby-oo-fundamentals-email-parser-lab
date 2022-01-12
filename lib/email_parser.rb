@@ -14,13 +14,18 @@ class EmailAddressParser
 
   def parse
     #binding.pry
-    @email_addresses.split(",")
+    #@email_addresses.split(", ")
+     @email_addresses.split(/, | /).uniq
+     #@email_addresses.split(", ").uniq
+    #@email_addresses.split(" ")
+
+    
   end
 
 end
 
-parser = EmailAddressParser.new(@email_addresses)
-parser.pa
+# parser = EmailAddressParser.new(@email_addresses)
+# parser.parse
 
 
 
